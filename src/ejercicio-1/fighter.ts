@@ -1,3 +1,7 @@
+/**
+ * Tipo de dato para distinguir las eficacias a la hora de la pelea
+ * entre distintos luchadores de varios Universos
+ */
 export type efecto = 'Eficaz' | 'No Eficaz' | 'Normal';
 
 export abstract class Fighter {
@@ -7,63 +11,73 @@ export abstract class Fighter {
     protected defensa: number, protected velocidad: number,
     protected universo: string, protected frase?: string) {}
   /**
-   * Nombre del luchador
+   * @returns Nombre del luchador
   */
   getNombre() {
     return this.nombre;
   }
   /**
-    * Altura del luchador
+    * @returns Altura del luchador
    */
   getAltura() {
     return this.altura;
   }
   /**
-   * Peso del luchador
+   * @returns Peso del luchador
   */
   getPeso() {
     return this.peso;
   }
   /**
-   * Tipo del luchador
+   * @returns Tipo del luchador
    */
   getTipoluchador() {
     return this.tipo;
   }
   /**
-  * salud del luchador
+  * @returns salud del luchador
   */
   getSalud() {
     return this.salud;
   }
   /**
-   * Ataque del luchador
+   * @returns Ataque del luchador
    */
   getAtaque() {
     return this.ataque;
   }
   /**
-   * Defensa del luchador
+   * @returns Defensa del luchador
    */
   getDefensa() {
     return this.defensa;
   }
   /**
-   * Velocidad del luchador
+   * @returns Velocidad del luchador
    */
   getVelocidad() {
     return this.velocidad;
   }
-
+  /**
+   * @returns Universo del luchador
+   */
   getUniverso() {
     return this.universo;
   }
+  /**
+   * @returns Frase (en caso de que tenga) del jugador
+   */
   getFrase() {
     return this.frase;
   }
-
+  /**
+   * @param valor La salud maxima del jugador
+   */
   setSalud(valor: number) {
     this.salud = valor;
   }
+  /**
+   * @param luchador la efectividad del ataque de cualquier luchador
+   */
   abstract getEfecto(luchador: any): efecto;
 }

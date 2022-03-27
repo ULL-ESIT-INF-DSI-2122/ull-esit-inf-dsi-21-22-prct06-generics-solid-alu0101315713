@@ -26,9 +26,9 @@ describe("ArithmeticableCollection", () => {
 });
 
 describe("Complex", () => {
-  
+
 });
 
 describe("Rational", () => {
-  
+
 });*/

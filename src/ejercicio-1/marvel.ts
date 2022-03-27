@@ -1,17 +1,20 @@
 import {Fighter, efecto} from './fighter';
-
-export type poder = 'Destructor';
 /**
-  * Clase Marvel
-*/
+ * Tipo de dato para distinguir luchadores del Universo Marvel
+ */
+export type poder = 'Destructor';
 export class Marvel extends Fighter {
   /**
   * Constructor de la clase Marvel
   * @param nombre nombre del luchador de Marvel
   * @param peso peso del luchador de Marvel
   * @param altura altura del luchador de Marvel
-  * @param datos datos de ataque, velocidad, defensa y hp
-  * @param universo universo al que pertenece luchador de Marvel
+  * @param peso peso del luchador de Marvel
+  * @param tipo tipo del luchador de Marvel
+  * @param salud salud del luchador de Marvel
+  * @param ataque ataque del luchador de Marvel
+  * @param defensa defensa del luchador de Marvel
+  * @param velocidad velocidad del luchador de Marvel
   * @param frase frase que dice el luchador de Marvel
   */
   constructor(protected nombre: string, protected altura: number,
@@ -21,6 +24,11 @@ export class Marvel extends Fighter {
     super(nombre, altura, peso, 'Guerrero', salud, ataque, defensa, velocidad,
         'Marvel', frase);
   }
+  /**
+   *
+   * @param luchador El luchador hará ataques eficaces
+   * @returns
+   */
   getEfecto(luchador: Marvel): efecto {
     return 'Eficaz';
   }

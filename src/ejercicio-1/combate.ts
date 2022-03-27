@@ -16,33 +16,33 @@ export class Combate<T extends Fighter, U extends Fighter> {
       ventaja = luchador1.getEfecto(luchador2);
     } else {
       switch (luchador1.getTipoluchador()) {
-        case "bicho":
-          if (luchador2.getTipoluchador() == "Guerrero") {
-            ventaja = "Eficaz";
-          } else if (luchador2.getTipoluchador() == "Magia") {
-            ventaja = "No Eficaz";
+        case 'PokeFuerza':
+          if (luchador2.getTipoluchador() === 'Guerrero') {
+            ventaja = 'Eficaz';
+          } else if (luchador2.getTipoluchador() === 'La Fuerza') {
+            ventaja = 'No Eficaz';
           } else {
-            ventaja = "Normal";
+            ventaja = 'Normal';
           }
           break;
 
-        case "Guerrero":
-          if (luchador2.getTipoluchador() == "Magia") {
-            ventaja = "Eficaz";
-          } else if (luchador2.getTipoluchador() == "bicho") {
-            ventaja = "No Eficaz";
+        case 'Guerrero':
+          if (luchador2.getTipoluchador() === 'La Fuerza') {
+            ventaja = 'Eficaz';
+          } else if (luchador2.getTipoluchador() === 'PokeFuerza') {
+            ventaja = 'No Eficaz';
           } else {
-            ventaja = "Normal";
+            ventaja = 'Normal';
           }
           break;
 
-        case "Magia":
-          if (luchador2.getTipoluchador() == "bicho") {
-            ventaja = "Eficaz";
-          } else if (luchador2.getTipoluchador() == "Guerrero") {
-            ventaja = "No Eficaz";
+        case 'La Fuerza':
+          if (luchador2.getTipoluchador() === 'PokeFuerza') {
+            ventaja = 'Eficaz';
+          } else if (luchador2.getTipoluchador() === 'Guerrero') {
+            ventaja = 'No Eficaz';
           } else {
-            ventaja = "Normal";
+            ventaja = 'Normal';
           }
           break;
       }

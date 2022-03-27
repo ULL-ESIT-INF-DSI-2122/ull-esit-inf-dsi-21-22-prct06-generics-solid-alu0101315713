@@ -1,9 +1,8 @@
 import {Fighter, efecto} from "./fighter";
-
-export type poke = 'fuego' | 'agua' | 'eléctrico' | 'hierba' | 'normal';
 /**
- * Clase que muestra la informacion del Pokemon que se guarda
+ * Tipo de dato para distinguir luchadores del Universo Pokemon
  */
+export type poke = 'fuego' | 'agua' | 'eléctrico' | 'hierba' | 'normal';
 export class Pokemon extends Fighter {
   /**
  * @param nombre Nombre del Pokemon
@@ -19,7 +18,7 @@ export class Pokemon extends Fighter {
     protected peso: number, protected tipo: poke, protected salud: number,
     protected ataque: number, protected defensa: number,
     protected velocidad: number, frase?: string) {
-    super(nombre, altura, peso, 'bicho', salud, ataque, defensa, velocidad,
+    super(nombre, altura, peso, 'PokeFuerza', salud, ataque, defensa, velocidad,
         'Pokemon', frase);
   }
   /**
@@ -43,6 +42,11 @@ export class Pokemon extends Fighter {
     console.log('|Velocidad:  ' + this.getVelocidad());
     // console.log('-------------------------');
   }
+  /**
+   *
+   * @param pokemon El Pokemon tendrá una eficacia según su tipo
+   * @returns
+   */
   getEfecto(pokemon: Pokemon): efecto {
     if (pokemon.getTipo() === this.tipo) {
       console.log('Has hecho daño neutral, daño:');
@@ -100,5 +104,5 @@ export class Pokemon extends Fighter {
   }
 }
 
-const prueba: Pokemon = new Pokemon('Ursaring', 1.8, 125.8, 'normal', 90, 130, 75, 55);
-console.log(prueba.pokeInformacion());
+/* const prueba: Pokemon = new Pokemon('Ursaring', 1.8, 125.8, 'normal', 90, 130, 75, 55);
+console.log(prueba.pokeInformacion());*/
