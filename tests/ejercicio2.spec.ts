@@ -8,7 +8,7 @@ import {PelisColeccion} from '../src/ejercicio-2/colp';
 import {DocColeccion} from '../src/ejercicio-2/cold';
 
 const peli1 = new Peliculas('El gigante de hierro', 'Brad Bird', ['Vin Diesel', 'Jennifer Aniston', 'Eli Marienthal'], ['Drama', 'Comedia', 'Animación'], 1999);
-const peli2 = new Peliculas('Titanic', 'James Cameron', ['Kate Winsconst', 'Leonardo DiCaprio'], ['Romance', 'Drama', 'Histórico'], 1997);
+const peli2 = new Peliculas('Mamá', 'Andrés Muschietti', ['Jessica Chastain', 'Nikolaj Coster-Waldau'], ['Suspense'], 2013);
 const peli3 = new Peliculas('UP', 'Pete Docter', ['Edward Asner', 'Christopher Plummer'], ['Animación'], 2009);
 
 const serie1 = new Series('Vis a Vis', 'Daniel Écija', ['Maggie Civantos', 'Najwa Nimri', 'Ramiro Blas'], ['Suspense', 'Policiaco', 'Drama', 'Thriller'], 1996);
