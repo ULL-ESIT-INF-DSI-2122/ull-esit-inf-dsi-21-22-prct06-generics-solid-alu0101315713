@@ -21,7 +21,7 @@ export class Mensaje {
   /**
     * @returns caracteres
   */
-  public getCaracteres(index: number) {
+  public getCarac(index: number) {
     return this.msj.charAt(index);
   }
 }
