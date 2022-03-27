@@ -1,6 +1,6 @@
 import 'mocha';
 import {expect} from 'chai';
-// import {Series} from '../src/ejercicio-2/series';
+import {Series} from '../src/ejercicio-2/series';
 import {Peliculas} from '../src/ejercicio-2/pelis';
 /* import {Documentales} from '../src/ejercicio-2/doc';
 import {ColeccionSeries} from '../src/ejercicio-2/cols';
@@ -10,11 +10,11 @@ import {ColeccionDocumentales} from '../src/ejercicio-2/cold';*/
 const peli1 = new Peliculas('El gigante de hierro', 'Brad Bird', ['Vin Diesel', 'Jennifer Aniston', 'Eli Marienthal'], ['Drama', 'Comedia', 'Animación'], 1999);
 const peli2 = new Peliculas('Titanic', 'James Cameron', ['Kate Winsconst', 'Leonardo DiCaprio'], ['Romance', 'Drama', 'Histórico'], 1997);
 const peli3 = new Peliculas('UP', 'Pete Docter', ['Edward Asner', 'Christopher Plummer'], ['Animación'], 2009);
-/*
-const serie1 = new Series('Vis a Vis', 'Daniel Écija', ['Suspense', 'Policiaco', 'Drama', 'Thriller'], 1996);
-const serie2 = new Series('Fullmetal Alchemist', 'Hiromu Arakawa', ['Drama', 'Fantasía', 'Aventura'], 2001);
-const serie3 = new Series('The Legend of Vox Machina', 'Matthew Mercer', ['Acción', 'Fantasía', 'Aventura'], 2022);
 
+const serie1 = new Series('Vis a Vis', 'Daniel Écija', ['Maggie Civantos', 'Najwa Nimri', 'Ramiro Blas'], ['Suspense', 'Policiaco', 'Drama', 'Thriller'], 1996);
+const serie2 = new Series('Fullmetal Alchemist', 'Hiromu Arakawa', ['Edward Elric', 'Alphonse Elric'], ['Drama', 'Fantasía', 'Aventura'], 2001);
+const serie3 = new Series('The Legend of Vox Machina', 'Matthew Mercer', ['Laura Bailey', 'Matthew Mercer'], ['Acción', 'Fantasía', 'Aventura'], 2022);
+/*
 const doc1 = new Documentales('Dinosaurios', 'Robert Guenette', ['Naturaleza'], 2013);
 const doc2 = new Documentales('Blackfish', 'Gabriela Cowperthwaite', ['Naturaleza'], 1985);
 
@@ -39,7 +39,7 @@ describe('Clase Películas', () => {
     return expect(peli3.getAño()).to.be.equal(2009);
   });
 });
-/*
+
 describe('Clase Series', () => {
   it('Nombre de la serie', () => {
     return expect(serie2.getNombre()).to.be.equal('Fullmetal Alchemist');
@@ -54,7 +54,7 @@ describe('Clase Series', () => {
     return expect(serie3.getAño()).to.be.equal(2022);
   });
 });
-
+/*
 describe('Clase Documentales', () => {
   it('Nombre del documental', () => {
     return expect(doc1.getNombre()).to.be.equal('Dinosaurios');
