@@ -1,15 +1,15 @@
 import {BasicStreamableCollection} from "./basicstreamablecollection";
 import {Peliculas} from "./pelis";
 /**
- * @param videos tipo Peliculas con las Peliculas
+ * @param videos peliculas
  */
 export class PelisColeccion extends BasicStreamableCollection<Peliculas> {
   constructor(protected videos: Peliculas[]) {
     super(videos);
   }
   /**
-    * @param nombre de serie
-    * @returns la serie
+    * @param nombre de peliculas
+    * @returns la peliculas
   */
   public getNombreVideo(nombre: string) {
     const exito: Peliculas []= [];
@@ -23,8 +23,8 @@ export class PelisColeccion extends BasicStreamableCollection<Peliculas> {
     return exito;
   }
   /**
-    * @param año de serie
-    * @returns la serie
+    * @param año de peliculas
+    * @returns la peliculas
   */
   public getAñoVideo(año: number) {
     const exito: Peliculas []= [];
@@ -38,8 +38,8 @@ export class PelisColeccion extends BasicStreamableCollection<Peliculas> {
     return exito;
   }
   /**
-    * @param autor de serie
-    * @returns la serie
+    * @param autor de peliculas
+    * @returns la peliculas
   */
   public getAutorVideo(autor: string) {
     const exito: Peliculas []= [];

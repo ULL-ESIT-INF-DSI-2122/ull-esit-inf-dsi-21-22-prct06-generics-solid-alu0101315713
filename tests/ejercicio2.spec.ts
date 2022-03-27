@@ -5,7 +5,7 @@ import {Peliculas} from '../src/ejercicio-2/pelis';
 import {Documentales} from '../src/ejercicio-2/doc';
 import {SeriesColeccion} from '../src/ejercicio-2/cols';
 import {PelisColeccion} from '../src/ejercicio-2/colp';
-// import {ColeccionDocumentales} from '../src/ejercicio-2/cold';*/
+import {DocColeccion} from '../src/ejercicio-2/cold';
 
 const peli1 = new Peliculas('El gigante de hierro', 'Brad Bird', ['Vin Diesel', 'Jennifer Aniston', 'Eli Marienthal'], ['Drama', 'Comedia', 'Animación'], 1999);
 const peli2 = new Peliculas('Titanic', 'James Cameron', ['Kate Winsconst', 'Leonardo DiCaprio'], ['Romance', 'Drama', 'Histórico'], 1997);
@@ -20,8 +20,8 @@ const doc2 = new Documentales('Blackfish', 'Gabriela Cowperthwaite', ['Tilikum',
 
 const colseries = new SeriesColeccion([serie1, serie2, serie3]);
 const colpeli = new PelisColeccion([peli2, peli1, peli3]);
-/* const coldoc = new ColeccionDocumentales([doc1, doc2]);
-*/
+const coldoc = new DocColeccion([doc1, doc2]);
+
 describe('Clase Películas', () => {
   it('Nombre de la pelicula', () => {
     return expect(peli1.getNombre()).to.be.equal('El gigante de hierro');
@@ -81,7 +81,7 @@ describe('Colección de series', () => {
     return expect(colseries.getAutorVideo('Hiromu Arakawa')).to.be.eql(undefined);
   });
 });
-/*
+
 describe('Colección de peliculas', () => {
   it('Pelicula encontrada por el nombre', () => {
     return expect(colpeli.getNombreVideo('UP')).to.be.eql(undefined);
@@ -105,4 +105,3 @@ describe('Colección de documentales de la plataforma', () => {
     return expect(coldoc.getAutorVideo('Gabriela Cowperthwaite')).to.be.eql(undefined);
   });
 });
-*/

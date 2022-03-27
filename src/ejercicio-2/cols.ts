@@ -1,7 +1,7 @@
 import {BasicStreamableCollection} from "./basicstreamablecollection";
 import {Series} from "./series";
 /**
- * @param videos tipo Series con las series
+ * @param videos series
  */
 export class SeriesColeccion extends BasicStreamableCollection<Series> {
   constructor(protected videos: Series[]) {
