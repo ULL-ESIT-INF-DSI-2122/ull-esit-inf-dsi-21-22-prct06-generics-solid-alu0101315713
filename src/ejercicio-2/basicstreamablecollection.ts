@@ -1,6 +1,6 @@
 import {Streamable} from "./streamable";
 /**
- * @param videos: T[] colección de vídeos
+ * @param videos: Array de vídeos
 */
 export abstract class BasicStreamableCollection<T> implements Streamable<T> {
   constructor(protected videos: T[]) {}

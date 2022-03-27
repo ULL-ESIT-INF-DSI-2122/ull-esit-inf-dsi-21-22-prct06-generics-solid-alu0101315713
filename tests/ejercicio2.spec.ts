@@ -2,8 +2,8 @@ import 'mocha';
 import {expect} from 'chai';
 import {Series} from '../src/ejercicio-2/series';
 import {Peliculas} from '../src/ejercicio-2/pelis';
-/* import {Documentales} from '../src/ejercicio-2/doc';
-import {ColeccionSeries} from '../src/ejercicio-2/cols';
+import {Documentales} from '../src/ejercicio-2/doc';
+/* import {ColeccionSeries} from '../src/ejercicio-2/cols';
 import {ColeccionPeliculas} from '../src/ejercicio-2/colp';
 import {ColeccionDocumentales} from '../src/ejercicio-2/cold';*/
 
@@ -14,10 +14,10 @@ const peli3 = new Peliculas('UP', 'Pete Docter', ['Edward Asner', 'Christopher P
 const serie1 = new Series('Vis a Vis', 'Daniel Écija', ['Maggie Civantos', 'Najwa Nimri', 'Ramiro Blas'], ['Suspense', 'Policiaco', 'Drama', 'Thriller'], 1996);
 const serie2 = new Series('Fullmetal Alchemist', 'Hiromu Arakawa', ['Edward Elric', 'Alphonse Elric'], ['Drama', 'Fantasía', 'Aventura'], 2001);
 const serie3 = new Series('The Legend of Vox Machina', 'Matthew Mercer', ['Laura Bailey', 'Matthew Mercer'], ['Acción', 'Fantasía', 'Aventura'], 2022);
-/*
-const doc1 = new Documentales('Dinosaurios', 'Robert Guenette', ['Naturaleza'], 2013);
-const doc2 = new Documentales('Blackfish', 'Gabriela Cowperthwaite', ['Naturaleza'], 1985);
 
+const doc1 = new Documentales('Dinosaurios', 'Robert Guenette', ['Jack Horner', 'Robert Bakker'], ['Naturaleza'], 2013);
+const doc2 = new Documentales('Blackfish', 'Gabriela Cowperthwaite', ['Tilikum', 'James Earl Jones'], ['Naturaleza'], 1985);
+/*
 const colseries = new ColeccionSeries([serie1, serie2, serie3]);
 const colpeli = new ColeccionPeliculas([peli2, peli1, peli3]);
 const coldoc = new ColeccionDocumentales([doc1, doc2]);
@@ -54,13 +54,13 @@ describe('Clase Series', () => {
     return expect(serie3.getAño()).to.be.equal(2022);
   });
 });
-/*
+
 describe('Clase Documentales', () => {
   it('Nombre del documental', () => {
     return expect(doc1.getNombre()).to.be.equal('Dinosaurios');
   });
   it('Nombre del director del documental', () => {
-    return expect(doc1.getDirector()).to.be.equal('Robert Guenette');
+    return expect(doc1.getAutor()).to.be.equal('Robert Guenette');
   });
   it('Géneros del documental', () => {
     return expect(doc1.getGenero()).to.be.eql(['Naturaleza']);
@@ -69,7 +69,7 @@ describe('Clase Documentales', () => {
     return expect(doc1.getAño()).to.be.equal(2013);
   });
 });
-
+/*
 describe('Colección de series', () => {
   it('Serie encontrada por nombre', () => {
     return expect(colseries.getNombreVideo('Vis a Vis')).to.be.eql(undefined);
