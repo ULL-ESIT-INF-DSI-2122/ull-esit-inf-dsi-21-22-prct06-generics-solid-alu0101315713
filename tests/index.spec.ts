@@ -1,4 +1,4 @@
-import "mocha";
+/* import "mocha";
 import {expect} from "chai";
 import {add} from "../src/index";
 describe("aaaaaaa", () => {
@@ -6,3 +6,4 @@ describe("aaaaaaa", () => {
     expect(add(1, 2)).to.be.eq(3);
   });
 });
+*/

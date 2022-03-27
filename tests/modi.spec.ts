@@ -1,4 +1,4 @@
-import "mocha";
+/* import "mocha";
 import {expect} from "chai";
 import {ArithmeticableCollection} from "../src/modi";
 import {addArithmeticable} from "../src/modi";
@@ -31,4 +31,4 @@ describe("Complex", () => {
 
 describe("Rational", () => {
   
-});
+});*/
