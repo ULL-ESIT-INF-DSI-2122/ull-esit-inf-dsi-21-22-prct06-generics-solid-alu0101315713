@@ -3,9 +3,9 @@ import {expect} from 'chai';
 import {Series} from '../src/ejercicio-2/series';
 import {Peliculas} from '../src/ejercicio-2/pelis';
 import {Documentales} from '../src/ejercicio-2/doc';
-/* import {ColeccionSeries} from '../src/ejercicio-2/cols';
-import {ColeccionPeliculas} from '../src/ejercicio-2/colp';
-import {ColeccionDocumentales} from '../src/ejercicio-2/cold';*/
+import {SeriesColeccion} from '../src/ejercicio-2/cols';
+import {PelisColeccion} from '../src/ejercicio-2/colp';
+// import {ColeccionDocumentales} from '../src/ejercicio-2/cold';*/
 
 const peli1 = new Peliculas('El gigante de hierro', 'Brad Bird', ['Vin Diesel', 'Jennifer Aniston', 'Eli Marienthal'], ['Drama', 'Comedia', 'Animación'], 1999);
 const peli2 = new Peliculas('Titanic', 'James Cameron', ['Kate Winsconst', 'Leonardo DiCaprio'], ['Romance', 'Drama', 'Histórico'], 1997);
@@ -17,10 +17,10 @@ const serie3 = new Series('The Legend of Vox Machina', 'Matthew Mercer', ['Laura
 
 const doc1 = new Documentales('Dinosaurios', 'Robert Guenette', ['Jack Horner', 'Robert Bakker'], ['Naturaleza'], 2013);
 const doc2 = new Documentales('Blackfish', 'Gabriela Cowperthwaite', ['Tilikum', 'James Earl Jones'], ['Naturaleza'], 1985);
-/*
-const colseries = new ColeccionSeries([serie1, serie2, serie3]);
-const colpeli = new ColeccionPeliculas([peli2, peli1, peli3]);
-const coldoc = new ColeccionDocumentales([doc1, doc2]);
+
+const colseries = new SeriesColeccion([serie1, serie2, serie3]);
+const colpeli = new PelisColeccion([peli2, peli1, peli3]);
+/* const coldoc = new ColeccionDocumentales([doc1, doc2]);
 */
 describe('Clase Películas', () => {
   it('Nombre de la pelicula', () => {
@@ -69,7 +69,7 @@ describe('Clase Documentales', () => {
     return expect(doc1.getAño()).to.be.equal(2013);
   });
 });
-/*
+
 describe('Colección de series', () => {
   it('Serie encontrada por nombre', () => {
     return expect(colseries.getNombreVideo('Vis a Vis')).to.be.eql(undefined);
@@ -81,7 +81,7 @@ describe('Colección de series', () => {
     return expect(colseries.getAutorVideo('Hiromu Arakawa')).to.be.eql(undefined);
   });
 });
-
+/*
 describe('Colección de peliculas', () => {
   it('Pelicula encontrada por el nombre', () => {
     return expect(colpeli.getNombreVideo('UP')).to.be.eql(undefined);

@@ -34,5 +34,5 @@ export abstract class BasicStreamableCollection<T> implements Streamable<T> {
     * Obtener vídeo por autor
     * @param autor
   */
-  abstract geAutortVideo(autor: string): T[] | void;
+  abstract getAutorVideo(autor: string): T[] | void;
 }
