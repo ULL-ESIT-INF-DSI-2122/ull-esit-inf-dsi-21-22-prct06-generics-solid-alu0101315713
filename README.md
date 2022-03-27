@@ -1,3 +1,4 @@
+- [0. Github Pages](#0-github-pages)
 - [1. Práctica 6 - Clases e interfaces genéricas. Principios SOLID.](#1-práctica-6---clases-e-interfaces-genéricas-principios-solid)
 - [2. Tareas Previas.](#2-tareas-previas)
 - [3. Para empezar.](#3-para-empezar)
@@ -8,6 +9,8 @@
 - [5. Conclusiones](#5-conclusiones)
 - [6. Bibliografía](#6-bibliografía)
 
+# 0. Github Pages
+- Si desea verlo en Pages, consulte [aquí](https://ull-esit-inf-dsi-2122.github.io/ull-esit-inf-dsi-21-22-prct06-generics-solid-alu0101315713/).
 # 1. Práctica 6 - Clases e interfaces genéricas. Principios SOLID.
 - En este [repositorio](https://github.com/ULL-ESIT-INF-DSI-2122/ull-esit-inf-dsi-21-22-prct06-generics-solid-alu0101315713.git) donde haré un resumen haciendo una descripción de todos los pasos para el procedimiento de esta práctica. La práctica consiste en hacer una serie de ejercicios siguiendo la [estructura básica de proyecto](https://ull-esit-inf-dsi-2122.github.io/typescript-theory/typescript-project-setup.html) que se vio en clase, incluyendo todos los dichos ejercicios en el directorio `./src/ejercicio-n`. siendo n el número de la actividad.
 
@@ -43,12 +46,12 @@ Partiendo del desarrollo realizado para el Ejercicio 1 de la Práctica 5, supong
 - Para realizar este ejercicio, creé varias clases:
 1. la clase abstracta Fighter
 - Con sus clases hijas (universos) donde hereda la función de efectividad a la hora de pelear:
-  - Marvel
-  - DC
-  - Pokemon
-  - DragonBall
-  - StarWars
-  - Combate
+  - [Marvel](src/ejercicio-1/marvel.ts)
+  - [DC](src/ejercicio-1/dc.ts)
+  - [Pokemon](src/ejercicio-1/pokemon.ts)
+  - [DragonBall](src/ejercicio-1/dragon_ball.ts)
+  - [StarWars](src/ejercicio-1/star_wars.ts)
+  - [Combate](src/ejercicio-1/combate.ts)
 
 - Para las clases hijas solo hizo falta heredar los atributos de la clase Fighter, pues ahí había declarado todos los getters para no tener que hacerlos después y seguir las reglas de SOLID. Luego en cada clase hija modifico la función abstracta que heredan, getEfecto, donde indico la efectividad que tienen los personajes de cada Universo a la hora de combatir. En general las clases herederas son muy similares.
 
@@ -70,9 +73,9 @@ Imagine que tiene que diseñar el modelo de datos de una plataforma de vídeo en
 En el Cifrado César, cada letra de un alfabeto se desplaza cierto número de posiciones. Por ejemplo, suponiendo el alfabeto ABCDEFGHIJKLMNÑOPQRSTUVWXYZ, si fijamos un Cifrado César con desplazamiento d = 5, entonces, la letra A pasaría a ser la letra F, la letra B pasaría a ser la letra G, la letra Z pasaría a ser la letra E, y así sucesivamente.
 
 - Para esta práctica tuve que hacer 3 clases, en 3 ficheros diferentes, siguiendo los principios SOLID.
-1. CifradoCesar
-2. Clave
-3. Mensaje
+1. [CifradoCesar](src/ejercicio-3/cifrado.ts)
+2. [Clave](src/ejercicio-3/clave.ts)
+3. [Mensaje](src/ejercicio-3/msj.ts)
 
 - La clase Mensaje tiene como métodos llamar al propio mensaje, obtener su tamaño y obtener determinado caracter del mismo, estas son claves para hacer el cifrado.
 - La clase Clave tiene como métodos llamar al propio mensaje, obtener su tamaño y obtener determinado caracter del mismo, estas son importantes para hacer el cifrado.
@@ -90,7 +93,6 @@ En el Cifrado César, cada letra de un alfabeto se desplaza cierto número de po
 - En mi caso Coveralls me da un resultado que se puede consultar entrando en este [link](https://coveralls.io/github/ULL-ESIT-INF-DSI-2122/ull-esit-inf-dsi-21-22-prct06-generics-solid-alu0101315713). Donde se demuestra que el código no alcanza todas las líneas en las ejecuciones, pues hay bastantes condiciones de por medio, y es lo normal, en caso contrario, por ejemplo en el caso de los Universos, los superheroes serian todos iguales y tendrian las mismas caracteristicas y efectividad en los combates, cosa que no puede ser.
 
 - Otro factor bastante importante fue hacer uso de los [Principios SOLID](https://ull-esit-inf-dsi-2122.github.io/typescript-theory/typescript-solid.html), que fue clave para hacer clases específicas pra métodos específicos, estos principios se usaron en toda la práctica, por ejemplo, en [ejercicio-3](./src/ejercicio-3).
-- 
 
 # 6. Bibliografía
 1. [Práctica 1](https://ull-esit-inf-dsi-2122.github.io/ull-esit-inf-dsi-21-22-prct01-iaas-alu0101315713/)
