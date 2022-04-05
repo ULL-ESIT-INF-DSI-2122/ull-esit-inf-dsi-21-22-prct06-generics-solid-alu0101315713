@@ -23,7 +23,6 @@ export class RandomNumber {
     return Math.random();
   }
 }
-
 /**
  * Genera un conjunto de números aleatorios
  */
